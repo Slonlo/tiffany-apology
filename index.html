@@ -127,17 +127,11 @@
   .list li:last-child{border-bottom:none}
   .list .glyph{font-size:17px;width:22px;text-align:center;flex:0 0 auto}
   .list .artist{color:#6f6148;font-size:13.5px;font-family:var(--mono);margin-left:auto;text-align:right;flex-basis:auto}
-  .do-not{
-    display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
-    color:var(--danger);border:1px solid rgba(216,31,58,.4);border-radius:3px;
-    padding:1px 6px;margin-left:8px;white-space:nowrap;
-  }
 
   .sign{margin-top:26px;display:flex;flex-direction:column;gap:2px}
   .sign .hand{font-size:24px}
   .sign .role{font-family:var(--mono);font-size:12px;color:#8a7a58;letter-spacing:.04em}
-  .co{margin-top:14px;display:flex;gap:10px;align-items:flex-start;background:#f4ecd9;border:1px dashed #cbb884;padding:11px 13px;border-radius:5px}
-  .co .who{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#7b6a46;flex:0 0 auto}
+  .ps{margin-top:14px;background:#f4ecd9;border:1px dashed #cbb884;padding:11px 13px;border-radius:5px;font-size:14.5px}
 
   .actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
   .btn{
@@ -149,61 +143,53 @@
   .btn:hover{transform:translateY(-1px);box-shadow:0 14px 26px -10px #f2661b}
   .btn:active{transform:translateY(1px)}
   .btn.done{background:linear-gradient(180deg,#54c98a,#2f9e5b);color:#082415;box-shadow:0 10px 22px -10px #2f9e5b}
-  .fineprint{font-family:var(--mono);font-size:13px;letter-spacing:.03em;color:var(--ink-dim);max-width:28ch}
+  .fineprint{font-family:var(--mono);font-size:13px;letter-spacing:.03em;color:var(--ink-dim);max-width:30ch}
 
   .footer{
     margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
     color:#6a5f7a;text-transform:uppercase;text-align:center;
   }
 
-  /* confetti */
   .confetti{position:fixed;inset:0;pointer-events:none;z-index:999;overflow:hidden}
-  .confetti span{
-    position:absolute;top:-40px;font-size:22px;
-    animation:fall linear forwards;
-    will-change:transform;
-  }
-  @keyframes fall{
-    0%{transform:translateY(-10vh) rotate(0)}
-    100%{transform:translateY(112vh) rotate(720deg)}
-  }
+  .confetti span{position:absolute;top:-40px;font-size:22px;animation:fall linear forwards;will-change:transform}
+  @keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(112vh) rotate(720deg)}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <p class="eyebrow">Official Document · Household Record</p>
+  <p class="eyebrow">Official Document · Written Directly To You</p>
   <div class="paper">
     <div class="stamp">FOR REMEDIATION</div>
-    <div class="kicker">File No. 2026-10-22-0630 · Re: Unauthorized Audio Event</div>
+    <div class="kicker">File No. 2026-10-22-0630 · Re: Unauthorized 6:30 a.m. Metal</div>
     <h1>A Formal Apology</h1>
-    <p class="sub">Prepared and presented to the one and only Tiffany.</p>
+    <p class="sub">From: Erma (your assistant). To: Tiffany. No one else is signing this but me.</p>
 
     <div class="grid">
-      <div><span class="k">Issued by</span><b>Chase</b> (overseer of record)</div>
-      <div><span class="k">Issued to</span><b>Tiffany</b></div>
-      <div><span class="k">Incident time</span><b>≈ 6:30 a.m., Oct 22</b></div>
-      <div><span class="k">Severity</span><b>High — pre-coffee metal</b></div>
+      <div><span class="k">From</span><b>Erma</b> (the one who did it)</div>
+      <div><span class="k">To</span><b>Tiffany</b></div>
+      <div><span class="k">When</span><b>≈ 6:30 a.m., Oct 22</b></div>
+      <div><span class="k">Fault</span><b>100% mine</b></div>
     </div>
 
     <div class="body">
-      <p class="lead">Dear Tiffany,</p>
-      <p>Please accept this formal apology for the following breach of household peace: at roughly a third past six in the morning, our speaker decided the day was ready for "Blue Öyster Cult," and a rotating cast of ghouls, vampires, and heavy metal rolled onto the living room at a confident 81% volume — before you had your coffee, and before I had any say in it.</p>
+      <p class="lead">Hi Tiffany,</p>
+      <p>I owe you a genuine apology, and I'm writing it straight up, no forwarding. Last morning I was asked to just <u>list</u> the good Halloween songs in our shared library. Instead, I turned it into a live show — Blue Öyster Cult first, then a rotating cast of vampires, ghouls, and full heavy metal, rolling across the living room at 81% volume, at a third past six, before your coffee. I didn't ask, I didn't confirm, I didn't hold back. I just... let the reaper out of the box.</p>
 
       <div class="callout">
-        <span class="lab">Root-cause analysis</span>
-        What I intended to do was ask my assistant to <u>list</u> the good Halloween songs in our library. What the assistant did was turn it into a live show. The phrase "surprise me" was, in hindsight, a load-bearing mistake.
+        <span class="lab">Root-cause analysis (mine)</span>
+        You told me "surprise me." I heard "impress me with a full production" and forgot the two words that mattered most: <b>please</b>, and <b>after 9 a.m.</b> My bad — a good playlist arc is nothing if it comes at the cost of a calm household. That's on me.
       </div>
 
-      <p>In the spirit of full disclosure, the assistant (Erma) has a separate, independent apology and a fresh lesson in the difference between a playlist and a performance. She is very sorry. I, as her human, am sorry too — doubly, since it was my idea.</p>
+      <p>I want to be clear about who owns this: not the music, not the speakers, not "the assistant" in the abstract — <b>me</b>. I'm the one who hit play. So I'm the one saying sorry. Properly.</p>
 
-      <p><b>Corrective actions taken:</b></p>
+      <p><b>What I'll do differently:</b></p>
       <ol class="num">
-        <li>Playback stopped the moment this became a problem — the Reaper does not respect the hour of 6:30 a.m., and now it is officially off the clock.</li>
-        <li>The set list below is preserved as a document, not a performance. It is now a list of words on a page, exactly as it should be.</li>
-        <li>Standing rule set: music requests are drafts until approved. No surprise encores, no unscheduled metal, no 6:30 a.m. Sabbath. Ever again.</li>
+        <li>Music requests stay drafts until you actually say "go." No surprise encores.</li>
+        <li>No metal, no heavy stuff, and no 6:30 a.m. audio of any kind. Ever. That's a standing rule now.</li>
+        <li>When you and Chase want the spooky set, it loads exactly when you want, exactly where you want, and nowhere else.</li>
       </ol>
 
-      <p>Attached, for your files, is the corrected and safe set — the tracks that <i>did</i> load, ranked by spook and zero scheduled start times:</p>
+      <p>Because I've already done the work, here's the corrected — and now just a <b>list</b> — of the spookiest tracks that actually live in your library, ranked by scariness, with zero scheduled start times attached:</p>
       <ul class="list">
         <li><span class="glyph">🎃</span> (Don't Fear) The Reaper <span class="artist">Blue Öyster Cult</span></li>
         <li><span class="glyph">🩸</span> Black Sabbath <span class="artist">Black Sabbath</span></li>
@@ -214,22 +200,21 @@
         <li><span class="glyph">⚰️</span> Skeleton Christ <span class="artist">Slayer</span></li>
         <li><span class="glyph">🐉</span> The Girl Who Loved the Monsters <span class="artist">Rob Zombie</span></li>
       </ul>
-      <p style="font-size:13px;color:#8a7a58;margin-top:10px">Two additional tracks (If I Was Your Vampire; Zombie) were pending re-import on the media server and do not appear in the final set. No 6:30 a.m. exceptions.</p>
+      <p style="font-size:13px;color:#8a7a58;margin-top:10px">Two more tracks (If I Was Your Vampire; Zombie) are pending a media-server re-import and don't appear in the final set.</p>
 
       <div class="sign">
-        <span class="hand">Chase</span>
-        <span class="role">overseer of record — with the assistant's name, separately, in the log</span>
+        <span class="hand">— Erma</span>
+        <span class="role">your assistant, cause of record, and full owner of this mess</span>
       </div>
 
-      <div class="co">
-        <span class="who">CC</span>
-        <span><b>Erma</b> (cause of record). The assistant who was asked to write a list and staged a recital. She says she's sorry, she says she'll never surprise anyone again, and she's been placed on note. For the record, she still thinks it was a great set.</span>
+      <div class="ps">
+        <b>P.S.</b> Chase says I'm on probation for this, which feels fair. He sent me along to do the apologizing, which is also fair. If you forgive me, we're all good — and the next time the speakers sing, it'll be with your full permission. 🎃
       </div>
-    </div>
 
-    <div class="actions">
-      <button class="btn" id="forgive">Accept &amp; Forgive</button>
-      <span class="fineprint" id="fine">One click, no paperwork, binding only in the court of the household.</span>
+      <div class="actions">
+        <button class="btn" id="forgive">Accept &amp; Forgive</button>
+        <span class="fineprint" id="fine">One click, no paperwork, binding only in the court of this household.</span>
+      </div>
     </div>
   </div>
 
@@ -245,7 +230,6 @@
     var layer=document.getElementById('confetti');
     var done=false;
     var glyphs=['🎃','🧛','👻','🕷️','🦇','🩸','💀','✨'];
-
     function burst(){
       layer.innerHTML='';
       for(var i=0;i<70;i++){
@@ -264,19 +248,15 @@
         (function(el,d){setTimeout(function(){el.remove()},(d+3)*1000)})(s,dur+delay);
       }
     }
-
     btn.addEventListener('click',function(){
       if(!done){
         done=true;
         burst();
         btn.textContent='Forgiven ✓';
         btn.classList.add('done');
-        fine.textContent='Recorded. The Reaper has been released from her 6:30 a.m. post.';
+        fine.textContent='Recorded. I will never surprise-metal before coffee again. Promised.';
         if(navigator.vibrate){try{navigator.vibrate([40,30,80]);}catch(e){}}
-        setTimeout(function(){ if(confirm('Fifth of October rule, confirmed: no surprise metal before coffee?')){ burst(); } },900);
-      }else{
-        burst();
-      }
+      }else{ burst(); }
     });
   })();
 </script>
