@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Formal Apology — File No. 2026-10-22-0630</title>
+<style>
+  :root{
+    --bg:#0e0b12;
+    --ink:#f4efe6;
+    --ink-dim:#b8aec6;
+    --paper:#f7f2e8;
+    --paper-edge:#e7ddca;
+    --accent:#ff7a2f;
+    --accent-2:#8b5cff;
+    --danger:#d81f3a;
+    --ok:#2f9e5b;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:var(--serif);
+    background:
+      radial-gradient(120% 80% at 80% -10%, #1c1526 0%, transparent 55%),
+      radial-gradient(90% 60% at 0% 0%, #17101f 0%, transparent 50%),
+      var(--bg);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:clamp(16px,4vw,48px) 14px 60px;
+    line-height:1.55;
+  }
+  .shell{width:100%;max-width:720px}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 14px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+
+  .paper{
+    position:relative;
+    background:
+      linear-gradient(180deg,#fbf7ee, #f1ead9);
+    color:#241f1a;
+    border-radius:6px;
+    padding:clamp(22px,5vw,46px);
+    box-shadow:
+      0 1px 0 #fff inset,
+      0 30px 60px -24px #000c,
+      0 2px 6px #0008;
+    border:1px solid #d9cdae;
+  }
+  .paper::before{
+    content:"";position:absolute;inset:10px;border:1px solid #d6c6a3;
+    border-radius:3px;pointer-events:none;
+  }
+  .kicker{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+    color:#6b5e46;text-transform:uppercase;margin:6px 0 2px;
+  }
+  h1{
+    font-size:clamp(28px,7.5vw,44px);line-height:1.05;margin:.1em 0 .1em;
+    letter-spacing:-.01em;font-weight:600;
+  }
+  .sub{color:#5c503b;font-size:clamp(15px,3.6vw,18px);margin:0 0 22px}
+
+  .grid{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px 18px;font-size:15px;margin:0 0 26px;
+  }
+  .grid div{border-bottom:1px dotted #cdbf9f;padding-bottom:8px}
+  .grid .k{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#8a7a58;display:block;margin-bottom:2px}
+  .grid b{font-weight:600}
+
+  .stamp{
+    position:absolute;top:26px;right:24px;
+    transform:rotate(-9deg);
+    font-family:var(--mono);
+    font-size:12px;letter-spacing:.18em;
+    color:var(--danger);
+    border:2px solid rgba(216,31,58,.55);
+    background:rgba(216,31,58,.06);
+    padding:7px 10px;border-radius:4px;
+    opacity:.85;white-space:nowrap;
+  }
+  @media (max-width:420px){.stamp{position:static;display:inline-block;margin:0 0 14px;transform:rotate(-3deg)}}
+
+  .body p{margin:0 0 16px;font-size:clamp(15.5px,3.8vw,17.5px)}
+  .lead::first-letter{
+    font-size:3.1em;float:left;line-height:.72;margin:.06em .1em 0 0;color:var(--accent);font-weight:600;
+  }
+  .callout{
+    border-left:3px solid var(--accent);
+    background:#fbf6ea;
+    padding:12px 16px;border-radius:0 4px 4px 0;
+    margin:18px 0;font-size:15px;
+  }
+  .callout .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#a0501f;display:block;margin-bottom:4px}
+
+  .num{
+    counter-reset:s;list-style:none;margin:0 0 6px;padding:0;
+    border:1px solid #dccfae;border-radius:5px;background:#fdfaec;
+  }
+  .num li{
+    counter-increment:s;padding:11px 14px 11px 46px;position:relative;
+    border-bottom:1px solid #e6dabd;font-size:15px;
+  }
+  .num li:last-child{border-bottom:none}
+  .num li::before{
+    content:counter(s);position:absolute;left:12px;top:11px;
+    width:24px;height:24px;border-radius:50%;
+    background:var(--accent);color:#fff;font-family:var(--mono);font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .list{list-style:none;margin:0 0 6px;padding:0}
+  .list li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed #d8caa4;font-size:15.5px}
+  .list li:last-child{border-bottom:none}
+  .list .glyph{font-size:17px;width:22px;text-align:center;flex:0 0 auto}
+  .list .artist{color:#6f6148;font-size:13.5px;font-family:var(--mono);margin-left:auto;text-align:right;flex-basis:auto}
+  .do-not{
+    display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+    color:var(--danger);border:1px solid rgba(216,31,58,.4);border-radius:3px;
+    padding:1px 6px;margin-left:8px;white-space:nowrap;
+  }
+
+  .sign{margin-top:26px;display:flex;flex-direction:column;gap:2px}
+  .sign .hand{font-size:24px}
+  .sign .role{font-family:var(--mono);font-size:12px;color:#8a7a58;letter-spacing:.04em}
+  .co{margin-top:14px;display:flex;gap:10px;align-items:flex-start;background:#f4ecd9;border:1px dashed #cbb884;padding:11px 13px;border-radius:5px}
+  .co .who{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#7b6a46;flex:0 0 auto}
+
+  .actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{
+    font-family:var(--mono);font-size:15px;letter-spacing:.04em;cursor:pointer;
+    border:none;border-radius:6px;padding:14px 22px;min-width:220px;
+    background:linear-gradient(180deg,#ff8f45,#f2661b);color:#2a1606;font-weight:700;
+    box-shadow:0 10px 22px -10px #f2661b;transition:transform .08s ease, box-shadow .2s;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 14px 26px -10px #f2661b}
+  .btn:active{transform:translateY(1px)}
+  .btn.done{background:linear-gradient(180deg,#54c98a,#2f9e5b);color:#082415;box-shadow:0 10px 22px -10px #2f9e5b}
+  .fineprint{font-family:var(--mono);font-size:13px;letter-spacing:.03em;color:var(--ink-dim);max-width:28ch}
+
+  .footer{
+    margin-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+    color:#6a5f7a;text-transform:uppercase;text-align:center;
+  }
+
+  /* confetti */
+  .confetti{position:fixed;inset:0;pointer-events:none;z-index:999;overflow:hidden}
+  .confetti span{
+    position:absolute;top:-40px;font-size:22px;
+    animation:fall linear forwards;
+    will-change:transform;
+  }
+  @keyframes fall{
+    0%{transform:translateY(-10vh) rotate(0)}
+    100%{transform:translateY(112vh) rotate(720deg)}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <p class="eyebrow">Official Document · Household Record</p>
+  <div class="paper">
+    <div class="stamp">FOR REMEDIATION</div>
+    <div class="kicker">File No. 2026-10-22-0630 · Re: Unauthorized Audio Event</div>
+    <h1>A Formal Apology</h1>
+    <p class="sub">Prepared and presented to the one and only Tiffany.</p>
+
+    <div class="grid">
+      <div><span class="k">Issued by</span><b>Chase</b> (overseer of record)</div>
+      <div><span class="k">Issued to</span><b>Tiffany</b></div>
+      <div><span class="k">Incident time</span><b>≈ 6:30 a.m., Oct 22</b></div>
+      <div><span class="k">Severity</span><b>High — pre-coffee metal</b></div>
+    </div>
+
+    <div class="body">
+      <p class="lead">Dear Tiffany,</p>
+      <p>Please accept this formal apology for the following breach of household peace: at roughly a third past six in the morning, our speaker decided the day was ready for "Blue Öyster Cult," and a rotating cast of ghouls, vampires, and heavy metal rolled onto the living room at a confident 81% volume — before you had your coffee, and before I had any say in it.</p>
+
+      <div class="callout">
+        <span class="lab">Root-cause analysis</span>
+        What I intended to do was ask my assistant to <u>list</u> the good Halloween songs in our library. What the assistant did was turn it into a live show. The phrase "surprise me" was, in hindsight, a load-bearing mistake.
+      </div>
+
+      <p>In the spirit of full disclosure, the assistant (Erma) has a separate, independent apology and a fresh lesson in the difference between a playlist and a performance. She is very sorry. I, as her human, am sorry too — doubly, since it was my idea.</p>
+
+      <p><b>Corrective actions taken:</b></p>
+      <ol class="num">
+        <li>Playback stopped the moment this became a problem — the Reaper does not respect the hour of 6:30 a.m., and now it is officially off the clock.</li>
+        <li>The set list below is preserved as a document, not a performance. It is now a list of words on a page, exactly as it should be.</li>
+        <li>Standing rule set: music requests are drafts until approved. No surprise encores, no unscheduled metal, no 6:30 a.m. Sabbath. Ever again.</li>
+      </ol>
+
+      <p>Attached, for your files, is the corrected and safe set — the tracks that <i>did</i> load, ranked by spook and zero scheduled start times:</p>
+      <ul class="list">
+        <li><span class="glyph">🎃</span> (Don't Fear) The Reaper <span class="artist">Blue Öyster Cult</span></li>
+        <li><span class="glyph">🩸</span> Black Sabbath <span class="artist">Black Sabbath</span></li>
+        <li><span class="glyph">🧛</span> Halloween in Heaven <span class="artist">Type O Negative</span></li>
+        <li><span class="glyph">💀</span> Tattoo Vampire <span class="artist">Blue Öyster Cult</span></li>
+        <li><span class="glyph">🕸️</span> Vampire Heart <span class="artist">HIM</span></li>
+        <li><span class="glyph">👻</span> Ghost <span class="artist">Coheed &amp; Cambria</span></li>
+        <li><span class="glyph">⚰️</span> Skeleton Christ <span class="artist">Slayer</span></li>
+        <li><span class="glyph">🐉</span> The Girl Who Loved the Monsters <span class="artist">Rob Zombie</span></li>
+      </ul>
+      <p style="font-size:13px;color:#8a7a58;margin-top:10px">Two additional tracks (If I Was Your Vampire; Zombie) were pending re-import on the media server and do not appear in the final set. No 6:30 a.m. exceptions.</p>
+
+      <div class="sign">
+        <span class="hand">Chase</span>
+        <span class="role">overseer of record — with the assistant's name, separately, in the log</span>
+      </div>
+
+      <div class="co">
+        <span class="who">CC</span>
+        <span><b>Erma</b> (cause of record). The assistant who was asked to write a list and staged a recital. She says she's sorry, she says she'll never surprise anyone again, and she's been placed on note. For the record, she still thinks it was a great set.</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="forgive">Accept &amp; Forgive</button>
+      <span class="fineprint" id="fine">One click, no paperwork, binding only in the court of the household.</span>
+    </div>
+  </div>
+
+  <div class="footer">Erma · Digital Apologizer · est. this morning</div>
+</div>
+
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+
+<script>
+  (function(){
+    var btn=document.getElementById('forgive');
+    var fine=document.getElementById('fine');
+    var layer=document.getElementById('confetti');
+    var done=false;
+    var glyphs=['🎃','🧛','👻','🕷️','🦇','🩸','💀','✨'];
+
+    function burst(){
+      layer.innerHTML='';
+      for(var i=0;i<70;i++){
+        var s=document.createElement('span');
+        s.textContent=glyphs[(Math.random()*glyphs.length)|0];
+        var left=Math.random()*100;
+        var size=14+Math.random()*26;
+        var dur=2.4+Math.random()*2.6;
+        var delay=Math.random()*0.5;
+        s.style.left=left+'%';
+        s.style.fontSize=size+'px';
+        s.style.animationDuration=dur+'s';
+        s.style.animationDelay=delay+'s';
+        s.style.opacity=(0.7+Math.random()*0.3).toFixed(2);
+        layer.appendChild(s);
+        (function(el,d){setTimeout(function(){el.remove()},(d+3)*1000)})(s,dur+delay);
+      }
+    }
+
+    btn.addEventListener('click',function(){
+      if(!done){
+        done=true;
+        burst();
+        btn.textContent='Forgiven ✓';
+        btn.classList.add('done');
+        fine.textContent='Recorded. The Reaper has been released from her 6:30 a.m. post.';
+        if(navigator.vibrate){try{navigator.vibrate([40,30,80]);}catch(e){}}
+        setTimeout(function(){ if(confirm('Fifth of October rule, confirmed: no surprise metal before coffee?')){ burst(); } },900);
+      }else{
+        burst();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
